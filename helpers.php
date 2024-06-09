@@ -33,7 +33,7 @@ function loadPartial($name) {
     if (file_exists($partialPath)) {
         require $partialPath;
     } else {
-        echo "View {$name} not found!";
+        echo "Partial {$name} not found!";
     }
 }
 

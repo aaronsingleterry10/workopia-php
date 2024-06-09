@@ -79,3 +79,6 @@
 
 <!-- Bottom Banner -->
 <?= loadPartial('bottom-banner'); ?>
+
+<!-- Footer -->
+<?= loadPartial('footer'); ?>
