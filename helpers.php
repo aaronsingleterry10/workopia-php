@@ -64,3 +64,13 @@ function loadPartial($name) {
     echo '</pre>';
     die();
  }
+
+/**
+ * Format salary
+ * @param string $salary
+ * @return string
+ */
+
+ function formatSalary($salary) {
+    return '$' . number_format($salary, 2);
+ }
