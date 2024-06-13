@@ -1,6 +1,7 @@
 <?php
 require '../helpers.php';
 
+use Framework\Router;
 
 // This eliminates the need for requires
 require __DIR__ . '/../vendor/autoload.php';
