@@ -7,7 +7,8 @@
  * @return string
  */
 
-function basePath($path = '') {
+function basePath($path = '')
+{
     return __DIR__ . '/' . $path;
 }
 
@@ -18,7 +19,8 @@ function basePath($path = '') {
  * @return void
  */
 
-function loadView($name, $data = []) {
+function loadView($name, $data = [])
+{
     $viewPath = basePath("App/views/{$name}.view.php");
 
     if (file_exists($viewPath)) {
@@ -28,7 +30,8 @@ function loadView($name, $data = []) {
         echo "View {$name} not found!";
     }
 }
-function loadPartial($name) {
+function loadPartial($name)
+{
     $partialPath = basePath("App/views/partials/{$name}.php");
 
     if (file_exists($partialPath)) {
@@ -45,25 +48,27 @@ function loadPartial($name) {
  * @return void
  */
 
- function inspect($value) {
+function inspect($value)
+{
     echo '<pre>';
     var_dump($value);
     echo '</pre>';
- }
+}
 
- /**
+/**
  * Inspect a value(s) and die
  * 
  * @param mixed $value
  * @return void
  */
 
- function inspectAndDie($value) {
+function inspectAndDie($value)
+{
     echo '<pre>';
     var_dump($value);
     echo '</pre>';
     die();
- }
+}
 
 /**
  * Format salary
@@ -71,16 +76,31 @@ function loadPartial($name) {
  * @return string
  */
 
- function formatSalary($salary) {
+function formatSalary($salary)
+{
     return '$' . number_format($salary, 2);
- }
+}
 
- /**
-  * Sanitize Data
-  * @param string $dirty
-  * @return string
-  */
+/**
+ * Sanitize Data
+ * @param string $dirty
+ * @return string
+ */
 
-  function sanitize($dirty) {
+function sanitize($dirty)
+{
     return filter_var(trim($dirty), FILTER_SANITIZE_SPECIAL_CHARS);
-  }
+}
+
+/**
+ * Redirect to a given url
+ * 
+ * @param string $url
+ * @return void
+ */
+
+function redirect($url)
+{
+header("Location: {$url}");
+exit;
+}
