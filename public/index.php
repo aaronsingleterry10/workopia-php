@@ -1,4 +1,5 @@
 <?php
+session_start();
 require '../helpers.php';
 
 use Framework\Router;
