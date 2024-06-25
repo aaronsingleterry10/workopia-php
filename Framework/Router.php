@@ -123,7 +123,7 @@ class Router
 
                     // Check for the param and add to $params array
                     if (preg_match('/\{(.+?)\}/', $routeSegments[$i], $matches)) {
-                        $params[$matches[$i]] = $uriSegments[$i];
+                        $params[$matches[1]] = $uriSegments[$i];
                     }
                 }
 
