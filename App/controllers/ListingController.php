@@ -182,7 +182,6 @@ class ListingController
             ErrorController::notFound('Listing not found');
             return;
         }
-        inspectAndDie($listing);
         loadView('/listings/edit', [
             'listing' => $listing
         ]);
